@@ -1,32 +1,54 @@
 #include <stdio.h>
 
-#define BUFFER_SIZE 7
-
-int main()
+/* 插入排序*/
+int insertSort(int *array, int length)
 {
-    int Array[BUFFER_SIZE] = {3, 1, 24, 5, 58, 12, 39};
-    int ptr = 0;
-
-    for (int idx = 1; idx < BUFFER_SIZE; idx++)
+    int ret = 0;
+    int pos = 0;
+    for (int idx = 1; idx < length; idx++)
     {
-        ptr = Array[idx];
-        for (int jdx = idx; jdx >= 0; jdx--)
+        pos = array[idx];
+        for (int begin = idx; begin >= 0; begin--)
         {
-            if (ptr < Array[jdx - 1])
+            if (pos < array[begin - 1])
             {
-                Array[jdx] = Array[jdx - 1];
+                array[begin] = array[begin - 1];
             }
             else
             {
-                Array[jdx] = ptr;
+                array[begin] = pos;
                 break;
             }
         }
     }
+    return ret;
+}
 
-    for (int idx = 0; idx < BUFFER_SIZE; idx++)
+int insertSort01(int *array, int length)
+{
+    int ret = 0;
+    int copyNum = 0;
+    for (int idx = 1; idx < length; idx++)
     {
-        printf("%d  ", Array[idx]);
+        copyNum = array[idx];
+        while (copyNum < array[idx -1])
+        {
+
+        }
+    }
+    return ret;
+}
+
+int main()
+{
+    int array[] = {36, 11, 24, 107, 23, 65};
+    int length = sizeof(array) / sizeof(array[0]);
+
+    insertSort(array, length);
+
+    for (int idx = 0; idx < length; idx++)
+    {
+        printf("%d  ", array[idx]);
     }
     printf("\n");
 
