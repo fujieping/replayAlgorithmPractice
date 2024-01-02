@@ -4,7 +4,7 @@
 
 int main()
 {
-    int Array[BUFFER_SIZE] = {1, 30, 24, 5, 58, 12, 39};
+    int Array[BUFFER_SIZE] = {3, 1, 24, 5, 58, 12, 39};
     int ptr = 0;
 
     for (int idx = 1; idx < BUFFER_SIZE; idx++)

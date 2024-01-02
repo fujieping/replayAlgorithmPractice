@@ -2,6 +2,8 @@
 
 #define BUFFER_SIZE 6
 
+/* 冒泡排序*/
+
 int swap(int *num1, int *num2)
 {
     int tmp = *num1;
