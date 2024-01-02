@@ -23,6 +23,10 @@ int print(int *ptr, int len)
 
 void bubbleSort(int *array, int length)
 {
+    if (array == NULL)
+    {
+        return;
+    }
     for (int end = length; end > 0; end--)
     {
         for (int begin = 1; begin < end; begin++)
@@ -38,6 +42,10 @@ void bubbleSort(int *array, int length)
 /* 优化：1*/
 void bubbleSort02(int *array, int length)
 {
+    if (array == NULL)
+    {
+        return;
+    }
     int sorted = 1;
     for (int end = length; end > 0; end--)
     {
@@ -54,7 +62,7 @@ void bubbleSort02(int *array, int length)
         }
         if (sorted)
         {
-            return;
+            break;
         }
     }
 }
@@ -62,6 +70,10 @@ void bubbleSort02(int *array, int length)
 /* 优化:3*/
 void bubbleSort03(int *array, int length)
 {
+    if (array == NULL)
+    {
+        return;
+    }
     int sorted = 1;
     int sortedIndex = 0;
     for (int end = length; end > 0; end--)
